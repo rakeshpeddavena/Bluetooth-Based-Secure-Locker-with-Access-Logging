@@ -1,4 +1,16 @@
-\# Hardware Architecture
+\## Hardware Block Diagram
+
+
+
+!\[Hardware Block Diagram](images/hardware/hardware-block-diagram.png)
+
+
+
+The block diagram provides a high-level view of the LPC2148 connections to the HC-05 Bluetooth module, keypad, LCD, AT24C256 EEPROM, RTC, administrator button, L293D motor driver, buzzer, and PC logging interface.
+
+
+
+
 
 
 

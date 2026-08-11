@@ -1,4 +1,26 @@
-&#x20;  # System Architecture
+&#x20;## System Architecture
+
+
+
+!\[System Architecture](images/architecture/system-architecture.png)
+
+
+
+The diagram shows the LPC2148 as the central controller and the relationship between Bluetooth, keypad, LCD, EEPROM, RTC, administrator input, authentication logic, motor control, buzzer feedback, and UART logging.
+
+
+
+
+
+
+
+
+
+
+
+
+
+&#x20; # System Architecture
 
 
 

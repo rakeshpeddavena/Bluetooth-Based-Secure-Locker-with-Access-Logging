@@ -1,3 +1,19 @@
+
+
+\## Authentication Flow
+
+
+
+!\[Authentication Flow](images/architecture/authentication-flow.png)
+
+
+
+The authentication flow accepts credentials through the supported user-input paths, compares them with the stored credential, and then follows either the access-granted or access-denied path.
+
+
+
+
+
 \# Authentication Architecture
 
 

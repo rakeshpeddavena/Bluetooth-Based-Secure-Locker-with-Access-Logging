@@ -178,6 +178,8 @@ flowchart TB
 
 \# 🧠 System Architecture
 
+!\[System Architecture](docs/images/architecture/system-architecture.png)
+
 
 
 The firmware is organized into independent peripheral drivers and application logic.
@@ -271,6 +273,10 @@ flowchart TB
 
 
 \# 🔐 Authentication Flow
+
+
+
+!\[Authentication Flow](docs/images/architecture/authentication-flow.png)
 
 
 
@@ -459,6 +465,12 @@ flowchart LR
 
 
 \# 🔌 Hardware Architecture
+
+
+
+!\[Hardware Block Diagram](docs/images/hardware/hardware-block-diagram.png)
+
+
 
 
 
