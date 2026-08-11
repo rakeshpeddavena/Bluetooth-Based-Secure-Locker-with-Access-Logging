@@ -16,7 +16,7 @@
 #include "delay.h"
 #include "motor.h"
 
-#define BUZZER  15    /* physical buzzer pin used on this board (P0.15) */
+#define BUZZER  11    /* physical buzzer pin used on this board (P0.11) */
 #define MOTOR1  12
 #define MOTOR2  13
 
