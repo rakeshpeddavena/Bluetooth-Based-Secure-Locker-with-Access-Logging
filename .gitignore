@@ -1,0 +1,25 @@
+# Keil build output
+*.o
+*.d
+*.crf
+*.lnp
+*.axf
+*.hex
+*.map
+*.plg
+*.sct
+*.htm
+*.build_log.htm
+*.tra
+*.lst
+*.bak
+*.uvgui.*
+*.uvguix.*
+*_uvopt.bak
+*_uvproj.bak
+*.dep
+JLinkLog.txt
+
+# OS files
+.DS_Store
+Thumbs.db
