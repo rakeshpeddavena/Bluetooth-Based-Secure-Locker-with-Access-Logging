@@ -793,7 +793,7 @@ int main(void)
 
 
 
-     if(!UART1_RxStr(bt_pwd,PASSWORD_LENGTH+1))
+     if(!UART1_RxStr(bt_pwd,PASSWORD_LENGTH))
      {
        /* Oversized / malformed input on UART1 - reject and go back to standby. */
 	   UART0_Log((u8*)"========================================");
@@ -823,7 +823,7 @@ int main(void)
 
 
 		/* Verify the received string against the stored Level-1 password. */
-		EE_ReadStr(L1_ADDR, stored, PASSWORD_LENGTH+1);
+		EE_ReadStr(L1_ADDR, stored, PASSWORD_LENGTH);
 
 		if(!StrMatch(bt_pwd, stored))
 		{  UART0_Log((u8*)"Status : FAILED");
