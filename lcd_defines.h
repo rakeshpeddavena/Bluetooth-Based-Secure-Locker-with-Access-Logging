@@ -1,19 +1,23 @@
 /*
  * lcd_defines.h
- * -----------------------------------------------------------------------
+ *
+ * ---
  * Pin mapping and HD44780 command bytes for the 16x2 character LCD
  * wired in 8-bit mode:
- *   DATA (D0-D7) : P0.8 - P0.15
- *   RS           : P0.16
- *   RW           : P0.18
- *   EN           : P0.17
- * -----------------------------------------------------------------------
+ *
+ * DATA (D0-D7) : P0.16 - P0.23
+ * RS           : P0.4
+ * RW           : P0.10
+ * EN           : P0.5
+ *
+ * ---
  */
 
-#define LCD_DATA     16     /* data bus starts at bit 8 -> P0.8 (WRITEBYTE start bit) */
-#define LCD_RS       4      /* offset within the byte written by WRITEBYTE: P0.16     */
-#define LCD_RW       10     /* P0.18 */
-#define LCD_EN       5      /* P0.17 */
+#define LCD_DATA     16
+#define LCD_RS       4
+#define LCD_RW       10
+#define LCD_EN       5
+
 
 /* HD44780 command bytes */
 #define CLEAR_LCD          0x01
