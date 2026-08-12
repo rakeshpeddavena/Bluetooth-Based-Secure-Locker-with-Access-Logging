@@ -24,107 +24,107 @@ flowchart TB
 
 
 
-&#x20;   USER\["User"]
+\&#x20;   USER\\\["User"]
 
 
 
-&#x20;   BT\["HC-05<br/>Bluetooth"]
+\&#x20;   BT\\\["HC-05<br/>Bluetooth"]
 
-&#x20;   KP\["4×4 Matrix<br/>Keypad"]
+\&#x20;   KP\\\["4×4 Matrix<br/>Keypad"]
 
 
 
-&#x20;   UART1\["UART1"]
+\&#x20;   UART1\\\["UART1"]
 
-&#x20;   KPM\["Keypad Driver"]
+\&#x20;   KPM\\\["Keypad Driver"]
 
 
 
-&#x20;   AUTH\["Authentication<br/>Logic"]
+\&#x20;   AUTH\\\["Authentication<br/>Logic"]
 
 
 
-&#x20;   EEPROM\["AT24C256<br/>EEPROM"]
+\&#x20;   EEPROM\\\["AT24C256<br/>EEPROM"]
 
 
 
-&#x20;   VERIFY{"Credential<br/>Valid?"}
+\&#x20;   VERIFY{"Credential<br/>Valid?"}
 
 
 
-&#x20;   MOTOR\["L293D<br/>Motor Driver"]
+\&#x20;   MOTOR\\\["L293D<br/>Motor Driver"]
 
-&#x20;   LOCKER\["🔒 Locker"]
+\&#x20;   LOCKER\\\["🔒 Locker"]
 
 
 
-&#x20;   LCD\["16×2 LCD"]
+\&#x20;   LCD\\\["16×2 LCD"]
 
-&#x20;   BUZZER\["Buzzer"]
+\&#x20;   BUZZER\\\["Buzzer"]
 
 
 
-&#x20;   RTC\["LPC2148<br/>RTC"]
+\&#x20;   RTC\\\["LPC2148<br/>RTC"]
 
 
 
-&#x20;   UART0\["UART0"]
+\&#x20;   UART0\\\["UART0"]
 
-&#x20;   PC\["PC Terminal<br/>Activity Log"]
+\&#x20;   PC\\\["PC Terminal<br/>Activity Log"]
 
 
 
-&#x20;   ADMIN\["Admin Button<br/>EINT1"]
+\&#x20;   ADMIN\\\["Admin Button<br/>EINT1"]
 
 
 
-&#x20;   USER --> BT
+\&#x20;   USER --> BT
 
-&#x20;   USER --> KP
+\&#x20;   USER --> KP
 
 
 
-&#x20;   BT --> UART1
+\&#x20;   BT --> UART1
 
-&#x20;   UART1 --> AUTH
+\&#x20;   UART1 --> AUTH
 
 
 
-&#x20;   KP --> KPM
+\&#x20;   KP --> KPM
 
-&#x20;   KPM --> AUTH
+\&#x20;   KPM --> AUTH
 
 
 
-&#x20;   EEPROM --> AUTH
+\&#x20;   EEPROM --> AUTH
 
-&#x20;   AUTH --> VERIFY
+\&#x20;   AUTH --> VERIFY
 
 
 
-&#x20;   VERIFY -->|YES| MOTOR
+\&#x20;   VERIFY -->|YES| MOTOR
 
-&#x20;   VERIFY -->|NO| BUZZER
+\&#x20;   VERIFY -->|NO| BUZZER
 
 
 
-&#x20;   MOTOR --> LOCKER
+\&#x20;   MOTOR --> LOCKER
 
-&#x20;   VERIFY -->|YES| BUZZER
+\&#x20;   VERIFY -->|YES| BUZZER
 
 
 
-&#x20;   AUTH --> RTC
+\&#x20;   AUTH --> RTC
 
-&#x20;   RTC --> UART0
+\&#x20;   RTC --> UART0
 
-&#x20;   UART0 --> PC
+\&#x20;   UART0 --> PC
 
 
 
-&#x20;   ADMIN --> AUTH
+\&#x20;   ADMIN --> AUTH
 
-&#x20;   AUTH --> LCD
+\&#x20;   AUTH --> LCD
 
 ```
 
@@ -192,77 +192,77 @@ flowchart TB
 
 
 
-&#x20;   APP\["Application Layer<br/>main.c"]
+\&#x20;   APP\\\["Application Layer<br/>main.c"]
 
 
 
-&#x20;   AUTH\["Authentication"]
+\&#x20;   AUTH\\\["Authentication"]
 
-&#x20;   ADMIN\["Administrator Functions"]
+\&#x20;   ADMIN\\\["Administrator Functions"]
 
-&#x20;   ACCESS\["Access Control"]
-
-
-
-&#x20;   LCD\["LCD Driver"]
-
-&#x20;   KPM\["Keypad Driver"]
-
-&#x20;   UART0\["UART0 Driver"]
-
-&#x20;   UART1\["UART1 Driver"]
-
-&#x20;   EEPROM\["EEPROM Driver"]
-
-&#x20;   I2C\["I²C Driver"]
-
-&#x20;   RTC\["RTC Driver"]
-
-&#x20;   EINT\["EINT1 Driver"]
-
-&#x20;   MOTOR\["Motor / Buzzer Driver"]
+\&#x20;   ACCESS\\\["Access Control"]
 
 
 
-&#x20;   APP --> AUTH
+\&#x20;   LCD\\\["LCD Driver"]
 
-&#x20;   APP --> ADMIN
+\&#x20;   KPM\\\["Keypad Driver"]
 
-&#x20;   APP --> ACCESS
+\&#x20;   UART0\\\["UART0 Driver"]
 
+\&#x20;   UART1\\\["UART1 Driver"]
 
+\&#x20;   EEPROM\\\["EEPROM Driver"]
 
-&#x20;   AUTH --> LCD
+\&#x20;   I2C\\\["I²C Driver"]
 
-&#x20;   AUTH --> KPM
+\&#x20;   RTC\\\["RTC Driver"]
 
-&#x20;   AUTH --> UART1
+\&#x20;   EINT\\\["EINT1 Driver"]
 
-&#x20;   AUTH --> EEPROM
-
-
-
-&#x20;   ADMIN --> KPM
-
-&#x20;   ADMIN --> EEPROM
-
-&#x20;   ADMIN --> RTC
-
-&#x20;   ADMIN --> EINT
+\&#x20;   MOTOR\\\["Motor / Buzzer Driver"]
 
 
 
-&#x20;   ACCESS --> MOTOR
+\&#x20;   APP --> AUTH
+
+\&#x20;   APP --> ADMIN
+
+\&#x20;   APP --> ACCESS
 
 
 
-&#x20;   EEPROM --> I2C
+\&#x20;   AUTH --> LCD
+
+\&#x20;   AUTH --> KPM
+
+\&#x20;   AUTH --> UART1
+
+\&#x20;   AUTH --> EEPROM
 
 
 
-&#x20;   APP --> UART0
+\&#x20;   ADMIN --> KPM
 
-&#x20;   APP --> RTC
+\&#x20;   ADMIN --> EEPROM
+
+\&#x20;   ADMIN --> RTC
+
+\&#x20;   ADMIN --> EINT
+
+
+
+\&#x20;   ACCESS --> MOTOR
+
+
+
+\&#x20;   EEPROM --> I2C
+
+
+
+\&#x20;   APP --> UART0
+
+\&#x20;   APP --> RTC
 
 ```
 
@@ -290,97 +290,97 @@ flowchart TD
 
 
 
-&#x20;   START(\["Authentication Request"])
+\&#x20;   START(\\\["Authentication Request"])
 
 
 
-&#x20;   METHOD{"Authentication<br/>Method"}
+\&#x20;   METHOD{"Authentication<br/>Method"}
 
 
 
-&#x20;   BT\["Bluetooth"]
+\&#x20;   BT\\\["Bluetooth"]
 
-&#x20;   KEYPAD\["Keypad"]
-
-
-
-&#x20;   UART\["UART1"]
-
-&#x20;   KPM\["Keypad Scanner"]
+\&#x20;   KEYPAD\\\["Keypad"]
 
 
 
-&#x20;   BUFFER\["Input Buffer"]
+\&#x20;   UART\\\["UART1"]
+
+\&#x20;   KPM\\\["Keypad Scanner"]
 
 
 
-&#x20;   EEPROM\["Read Stored Credential"]
+\&#x20;   BUFFER\\\["Input Buffer"]
 
 
 
-&#x20;   COMPARE{"Credential<br/>Matches?"}
+\&#x20;   EEPROM\\\["Read Stored Credential"]
 
 
 
-&#x20;   GRANT\["Access Granted"]
-
-&#x20;   DENY\["Access Denied"]
+\&#x20;   COMPARE{"Credential<br/>Matches?"}
 
 
 
-&#x20;   MOTOR\["Open Locker"]
+\&#x20;   GRANT\\\["Access Granted"]
 
-&#x20;   BUZZER1\["Buzzer Feedback"]
-
-&#x20;   LOG1\["Timestamped Log"]
+\&#x20;   DENY\\\["Access Denied"]
 
 
 
-&#x20;   START --> METHOD
+\&#x20;   MOTOR\\\["Open Locker"]
+
+\&#x20;   BUZZER1\\\["Buzzer Feedback"]
+
+\&#x20;   LOG1\\\["Timestamped Log"]
 
 
 
-&#x20;   METHOD --> BT
-
-&#x20;   METHOD --> KEYPAD
+\&#x20;   START --> METHOD
 
 
 
-&#x20;   BT --> UART
+\&#x20;   METHOD --> BT
 
-&#x20;   UART --> BUFFER
-
-
-
-&#x20;   KEYPAD --> KPM
-
-&#x20;   KPM --> BUFFER
+\&#x20;   METHOD --> KEYPAD
 
 
 
-&#x20;   BUFFER --> EEPROM
+\&#x20;   BT --> UART
 
-&#x20;   EEPROM --> COMPARE
-
-
-
-&#x20;   COMPARE -->|YES| GRANT
-
-&#x20;   COMPARE -->|NO| DENY
+\&#x20;   UART --> BUFFER
 
 
 
-&#x20;   GRANT --> MOTOR
+\&#x20;   KEYPAD --> KPM
 
-&#x20;   GRANT --> BUZZER1
-
-&#x20;   GRANT --> LOG1
+\&#x20;   KPM --> BUFFER
 
 
 
-&#x20;   DENY --> BUZZER1
+\&#x20;   BUFFER --> EEPROM
 
-&#x20;   DENY --> LOG1
+\&#x20;   EEPROM --> COMPARE
+
+
+
+\&#x20;   COMPARE -->|YES| GRANT
+
+\&#x20;   COMPARE -->|NO| DENY
+
+
+
+\&#x20;   GRANT --> MOTOR
+
+\&#x20;   GRANT --> BUZZER1
+
+\&#x20;   GRANT --> LOG1
+
+
+
+\&#x20;   DENY --> BUZZER1
+
+\&#x20;   DENY --> LOG1
 
 ```
 
@@ -400,7 +400,7 @@ The project uses separate communication channels for different purposes.
 
 | Interface | Device | Purpose |
 
-|---|---|---|
+|--- |---|---|
 
 | UART0 | PC Terminal | Activity/debug logging |
 
@@ -422,39 +422,39 @@ flowchart LR
 
 
 
-&#x20;   HC05\["HC-05"]
+\&#x20;   HC05\\\["HC-05"]
 
-&#x20;   UART1\["UART1"]
-
-
-
-&#x20;   EEPROM\["AT24C256"]
-
-&#x20;   I2C\["I²C0"]
+\&#x20;   UART1\\\["UART1"]
 
 
 
-&#x20;   PC\["PC"]
+\&#x20;   EEPROM\\\["AT24C256"]
 
-&#x20;   UART0\["UART0"]
-
-
-
-&#x20;   HC05 --> UART1
-
-&#x20;   UART1 --> MCU\["LPC2148"]
+\&#x20;   I2C\\\["I²C0"]
 
 
 
-&#x20;   MCU --> I2C
+\&#x20;   PC\\\["PC"]
 
-&#x20;   I2C --> EEPROM
+\&#x20;   UART0\\\["UART0"]
 
 
 
-&#x20;   MCU --> UART0
+\&#x20;   HC05 --> UART1
 
-&#x20;   UART0 --> PC
+\&#x20;   UART1 --> MCU\\\["LPC2148"]
+
+
+
+\&#x20;   MCU --> I2C
+
+\&#x20;   I2C --> EEPROM
+
+
+
+\&#x20;   MCU --> UART0
+
+\&#x20;   UART0 --> PC
 
 ```
 
@@ -480,51 +480,51 @@ flowchart TB
 
 
 
-&#x20;   MCU\["LPC2148"]
+\&#x20;   MCU\\\["LPC2148"]
 
 
 
-&#x20;   LCD\["16×2 LCD"]
+\&#x20;   LCD\\\["16×2 LCD"]
 
-&#x20;   KEYPAD\["4×4 Keypad"]
+\&#x20;   KEYPAD\\\["4×4 Keypad"]
 
-&#x20;   HC05\["HC-05"]
+\&#x20;   HC05\\\["HC-05"]
 
-&#x20;   EEPROM\["AT24C256"]
+\&#x20;   EEPROM\\\["AT24C256"]
 
-&#x20;   RTC\["Internal RTC"]
+\&#x20;   RTC\\\["Internal RTC"]
 
-&#x20;   ADMIN\["Admin Button"]
+\&#x20;   ADMIN\\\["Admin Button"]
 
-&#x20;   L293D\["L293D"]
+\&#x20;   L293D\\\["L293D"]
 
-&#x20;   MOTOR\["DC Motor"]
+\&#x20;   MOTOR\\\["DC Motor"]
 
-&#x20;   BUZZER\["Buzzer"]
+\&#x20;   BUZZER\\\["Buzzer"]
 
-&#x20;   PC\["PC Terminal"]
+\&#x20;   PC\\\["PC Terminal"]
 
 
 
-&#x20;   MCU --> LCD
+\&#x20;   MCU --> LCD
 
-&#x20;   MCU --> KEYPAD
+\&#x20;   MCU --> KEYPAD
 
-&#x20;   MCU --> HC05
+\&#x20;   MCU --> HC05
 
-&#x20;   MCU --> EEPROM
+\&#x20;   MCU --> EEPROM
 
-&#x20;   MCU --> RTC
+\&#x20;   MCU --> RTC
 
-&#x20;   MCU --> ADMIN
+\&#x20;   MCU --> ADMIN
 
-&#x20;   MCU --> L293D
+\&#x20;   MCU --> L293D
 
-&#x20;   L293D --> MOTOR
+\&#x20;   L293D --> MOTOR
 
-&#x20;   MCU --> BUZZER
+\&#x20;   MCU --> BUZZER
 
-&#x20;   MCU --> PC
+\&#x20;   MCU --> PC
 
 ```
 
@@ -646,11 +646,11 @@ The LCD driver provides:
 
 
 
-The actual GPIO positions are derived from `lcd\_defines.h` and the `WRITEBYTE()` macro in `define.h`.
+The actual GPIO positions are derived from `lcd\\\_defines.h` and the `WRITEBYTE()` macro in `define.h`.
 
 
 
-> Verify the exact LCD control-pin mapping against `lcd\_defines.h` before physical wiring. The source comments contain historical mapping descriptions that should not be treated as authoritative over the actual `#define` values.
+> Verify the exact LCD control-pin mapping against `lcd\\\_defines.h` before physical wiring. The source comments contain historical mapping descriptions that should not be treated as authoritative over the actual `#define` values.
 
 
 
@@ -668,9 +668,9 @@ The 4×4 keypad is scanned using four output rows and four input columns.
 
 ```text
 
-&#x20;      C0 C1 C2 C3
+\&#x20;      C0 C1 C2 C3
 
-&#x20;      ↓  ↓  ↓  ↓
+\&#x20;      ↓  ↓  ↓  ↓
 
 
 
@@ -680,7 +680,7 @@ R1 →   4  5  6  B
 
 R2 →   7  8  9  C
 
-R3 →   \*  0  #  D
+R3 →   \\\*  0  #  D
 
 ```
 
@@ -692,9 +692,9 @@ Special keys:
 
 ```text
 
-\# → ENTER / CONFIRM
+\\# → ENTER / CONFIRM
 
-\* → BACKSPACE
+\\\* → BACKSPACE
 
 ```
 
@@ -748,7 +748,7 @@ AT24C256
 
 └── 0x0010
 
-&#x20;   └── Level-2 Keypad credential
+\&#x20;   └── Level-2 Keypad credential
 
 ```
 
@@ -776,43 +776,43 @@ flowchart LR
 
 
 
-&#x20;   LPC\["LPC2148"]
+\&#x20;   LPC\\\["LPC2148"]
 
 
 
-&#x20;   IN1\["P0.12<br/>IN1"]
+\&#x20;   IN1\\\["P0.12<br/>IN1"]
 
-&#x20;   IN2\["P0.13<br/>IN2"]
-
-
-
-&#x20;   DRIVER\["L293D"]
+\&#x20;   IN2\\\["P0.13<br/>IN2"]
 
 
 
-&#x20;   MOTOR\["DC Motor"]
-
-&#x20;   BUZZER\["P0.11<br/>Buzzer"]
+\&#x20;   DRIVER\\\["L293D"]
 
 
 
-&#x20;   LPC --> IN1
+\&#x20;   MOTOR\\\["DC Motor"]
 
-&#x20;   LPC --> IN2
-
-
-
-&#x20;   IN1 --> DRIVER
-
-&#x20;   IN2 --> DRIVER
+\&#x20;   BUZZER\\\["P0.11<br/>Buzzer"]
 
 
 
-&#x20;   DRIVER --> MOTOR
+\&#x20;   LPC --> IN1
+
+\&#x20;   LPC --> IN2
 
 
 
-&#x20;   LPC --> BUZZER
+\&#x20;   IN1 --> DRIVER
+
+\&#x20;   IN2 --> DRIVER
+
+
+
+\&#x20;   DRIVER --> MOTOR
+
+
+
+\&#x20;   LPC --> BUZZER
 
 ```
 
@@ -858,23 +858,23 @@ UART0 sends human-readable activity information to a PC terminal.
 
 LPC2148
 
-&#x20;  │
+\&#x20;  │
 
-&#x20;  ├── RTC
+\&#x20;  ├── RTC
 
-&#x20;  │     │
+\&#x20;  │     │
 
-&#x20;  │     └── Timestamp
+\&#x20;  │     └── Timestamp
 
-&#x20;  │
+\&#x20;  │
 
-&#x20;  └── UART0
+\&#x20;  └── UART0
 
-&#x20;        │
+\&#x20;        │
 
-&#x20;        ↓
+\&#x20;        ↓
 
-&#x20;     PC Terminal
+\&#x20;     PC Terminal
 
 ```
 
@@ -1028,7 +1028,7 @@ See:
 
 
 
-\*\*\[`Testing \& Validation`](docs/testing.md)\*\*
+\*\*\[`Testing \\\& Validation`](docs/testing.md)\*\*
 
 
 
@@ -1052,27 +1052,27 @@ Basic workflow:
 
 Open Keil Project
 
-&#x20;      ↓
+\&#x20;      ↓
 
 Build Target
 
-&#x20;      ↓
+\&#x20;      ↓
 
 Resolve Errors / Warnings
 
-&#x20;      ↓
+\&#x20;      ↓
 
 Generate Firmware
 
-&#x20;      ↓
+\&#x20;      ↓
 
 Program LPC2148
 
-&#x20;      ↓
+\&#x20;      ↓
 
 Power / Reset
 
-&#x20;      ↓
+\&#x20;      ↓
 
 Verify Hardware
 
@@ -1084,7 +1084,7 @@ Detailed instructions:
 
 
 
-\*\*\[`Build \& Flash Guide`](docs/build-and-flash.md)\*\*
+\*\*\[`Build \\\& Flash Guide`](docs/build-and-flash.md)\*\*
 
 
 
@@ -1116,7 +1116,7 @@ Detailed instructions:
 
 | \[`Testing`](docs/testing.md) | Test strategy and validation |
 
-| \[`Build \& Flash`](docs/build-and-flash.md) | Firmware build/programming procedure |
+| \[`Build \\\& Flash`](docs/build-and-flash.md) | Firmware build/programming procedure |
 
 
 
@@ -1142,7 +1142,7 @@ Bluetooth-Based-Secure-Locker-with-Access-Logging/
 
 ├── lcd.h
 
-├── lcd\_defines.h
+├── lcd\\\_defines.h
 
 │
 
@@ -1150,7 +1150,7 @@ Bluetooth-Based-Secure-Locker-with-Access-Logging/
 
 ├── kpm.h
 
-├── kpm\_defines.h
+├── kpm\\\_defines.h
 
 │
 
@@ -1158,7 +1158,7 @@ Bluetooth-Based-Secure-Locker-with-Access-Logging/
 
 ├── uart0.h
 
-├── uart0\_defines.h
+├── uart0\\\_defines.h
 
 │
 
@@ -1172,7 +1172,7 @@ Bluetooth-Based-Secure-Locker-with-Access-Logging/
 
 ├── i2c.h
 
-├── i2c\_defines.h
+├── i2c\\\_defines.h
 
 │
 
@@ -1186,7 +1186,7 @@ Bluetooth-Based-Secure-Locker-with-Access-Logging/
 
 ├── rtc.h
 
-├── rtc\_defines.h
+├── rtc\\\_defines.h
 
 │
 
@@ -1200,7 +1200,7 @@ Bluetooth-Based-Secure-Locker-with-Access-Logging/
 
 ├── motor.h
 
-├── motor\_defines.h
+├── motor\\\_defines.h
 
 │
 
